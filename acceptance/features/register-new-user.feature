@@ -1,16 +1,16 @@
 Feature: New user registration
-  As a user
-  I want to register
+  As an api client
+  I want to register a new user
 
-  Scenario: Register as a new user
+  Scenario: Register a new user
     Given I have provided the email test@testdomain.com
-    When I press register
-    Then I receive a new registration email to the provided mail
-    And a new inactive user is register
+    When I submit the request
+    Then I receive a response STATUS 200 (OK)
+    And a url to the new registered user
 
   Scenario: Register with an already registered email
     Given I have provided the email test@testdomain.com
     And the provided email is already in use
-    When I press register
-    Then a warning is shown that the email is already in use
-    And no new user is register
+    When I submit the request
+    Then I receive the response STATUS 400 (Bad Request)
+    And a message body stating that the email is already in use
