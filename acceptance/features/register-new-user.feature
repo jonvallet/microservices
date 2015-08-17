@@ -6,7 +6,7 @@ Feature: New user registration
     Given I have provided the email test@testdomain.com
     When I submit the request
     Then I receive a response STATUS 200 (OK)
-    And a url to the new registered user
+    And the json with the contents of the new customer
 
   Scenario: Register with an already registered email
     Given I have provided the email test@testdomain.com
