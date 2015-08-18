@@ -1,7 +1,11 @@
 spring:
   application:
-    name: services.customers
+    name: customers
     
 server:
-  contextPath: /customers
-  port: 8081
+  port: 0
+
+eureka:
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}

@@ -4,7 +4,9 @@ import com.nakedwines.services.customers.model.Customer;
 import com.nakedwines.services.customers.repository.CustomerRepository;
 import com.nakedwines.services.customers.responses.EmailAlreadyInUseException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -20,11 +22,12 @@ public class Registration {
     @Autowired
     CustomerRepository customerRepository;
 
-    public Customer register(String testEmail) {
+    @RequestMapping(method = RequestMethod.POST)
+    public Customer register(@RequestBody Customer customer) {
 
-        checkIfEmailAlreadyExists(testEmail);
+        checkIfEmailAlreadyExists(customer.email);
 
-        return customerRepository.save(new Customer(testEmail));
+        return customerRepository.save(customer);
     }
 
     private void checkIfEmailAlreadyExists(String testEmail) {

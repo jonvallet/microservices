@@ -1,7 +1,16 @@
+info:
+  app:
+    name: Naked Wines Website
+    description: This is a service mocking the naked wines website
+    version: 1.0.0
+
 spring:
   application:
-    name: services.web
+    name: web
 
 server:
-  contextPath: /web
   port: 8080
+
+zuul:
+  routes:
+    customers: /customers/**

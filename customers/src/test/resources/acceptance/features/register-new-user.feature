@@ -12,5 +12,5 @@ Feature: New user registration
     Given I have provided the email test@testdomain.com
     And the provided email is already in use
     When I submit the request
-    Then I receive the response STATUS 400 (Bad Request)
-    And a message body stating that the email is already in use
+    Then I receive the response STATUS 409 (Conflict)
+    And a message body stating that the resource already exists
