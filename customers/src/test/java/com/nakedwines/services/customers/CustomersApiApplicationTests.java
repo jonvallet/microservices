@@ -1,4 +1,4 @@
-package customers;
+package com.nakedwines.services.customers;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

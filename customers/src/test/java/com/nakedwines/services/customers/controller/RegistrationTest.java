@@ -1,9 +1,9 @@
-package customers.controller;
+package com.nakedwines.services.customers.controller;
 
-import customers.CustomersApiApplication;
-import customers.model.Customer;
-import customers.repository.CustomerRepository;
-import customers.responses.EmailAlreadyInUseException;
+import com.nakedwines.services.customers.CustomersApiApplication;
+import com.nakedwines.services.customers.model.Customer;
+import com.nakedwines.services.customers.repository.CustomerRepository;
+import com.nakedwines.services.customers.responses.EmailAlreadyInUseException;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;

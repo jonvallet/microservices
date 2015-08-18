@@ -1,6 +1,4 @@
-package customers.model;
-
-import org.hibernate.validator.constraints.Email;
+package com.nakedwines.services.customers.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -15,7 +13,6 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @NotNull
-    @Email
     @Column(unique = true)
     public String email;
 

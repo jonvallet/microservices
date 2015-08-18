@@ -1,2 +1,7 @@
-application:
-  context: customer
+spring:
+  application:
+    name: services.customers
+    
+server:
+  contextPath: /customers
+  port: 8081

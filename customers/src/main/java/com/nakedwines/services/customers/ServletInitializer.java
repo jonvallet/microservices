@@ -1,4 +1,4 @@
-package customers;
+package com.nakedwines.services.customers;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;

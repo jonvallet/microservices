@@ -1,8 +1,8 @@
-package customers.controller;
+package com.nakedwines.services.customers.controller;
 
-import customers.model.Customer;
-import customers.repository.CustomerRepository;
-import customers.responses.EmailAlreadyInUseException;
+import com.nakedwines.services.customers.model.Customer;
+import com.nakedwines.services.customers.repository.CustomerRepository;
+import com.nakedwines.services.customers.responses.EmailAlreadyInUseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

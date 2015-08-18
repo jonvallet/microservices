@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: services.web
+
+server:
+  contextPath: /web
+  port: 8080

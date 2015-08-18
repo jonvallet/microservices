@@ -1,6 +1,6 @@
-package customers.repository;
+package com.nakedwines.services.customers.repository;
 
-import customers.model.Customer;
+import com.nakedwines.services.customers.model.Customer;
 import org.springframework.data.repository.CrudRepository;
 
 /**
