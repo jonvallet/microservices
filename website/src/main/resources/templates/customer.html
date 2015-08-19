@@ -13,7 +13,7 @@
 <body ng-controller="customerCtrl">
 <div class="container">
 
-    <form class="form-register">
+    <form class="form-register" name="customer">
         <h2 class="form-register-heading">Please register</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" class="form-control"
@@ -22,6 +22,7 @@
         <br/>
         <button class="btn btn-lg btn-primary btn-block"
                 type="submit"
+                ng-disabled="show_registering || customer.$invalid"
                 ng-click="register(customer)">Register</button>
         <br/>
         <div class="alert alert-success" role="alert" ng-show="show_success">
@@ -35,6 +36,10 @@
         <div class="alert alert-warning" role="alert" ng-show="show_conflict">
             <strong>Email already register. </strong>
             The provided email is already in use.
+        </div>
+        <div class="alert alert-info" role="alert" ng-show="show_registering">
+            <strong>Registering. </strong>
+            Please wait.
         </div>
     </form>
 
