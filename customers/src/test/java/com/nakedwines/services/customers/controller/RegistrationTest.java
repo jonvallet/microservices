@@ -32,14 +32,14 @@ public class RegistrationTest {
 
     @Test
     public void registerNewCustomer() {
-        registration.register(TEST_EMAIL);
+        registration.register(new Customer(TEST_EMAIL));
         Assert.assertNotNull(customerRepository.findByEmail(TEST_EMAIL));
     }
 
     @Test(expected = EmailAlreadyInUseException.class)
     public void registerAlreadyInUseEmailCustomer() {
         customerRepository.save(new Customer(TEST_EMAIL));
-        registration.register(TEST_EMAIL);
+        registration.register(new Customer(TEST_EMAIL));
     }
 
 }
