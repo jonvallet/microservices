@@ -7,6 +7,8 @@ info:
 spring:
   application:
     name: web
+  thymeleaf:
+    cache: false
 
 server:
   port: 8080
